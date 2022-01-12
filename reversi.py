@@ -120,7 +120,7 @@ def game(player1, player2):
 		on_gaming = False  # 　いったん、ゲーム終了にする
 		if can_play(board, BLACK):
 			# player1 に黒を置かせる
-			position = player1(board[:], BLACK)　#なぜ引数を持ってこられるのか？
+			position = player1(board[:], BLACK) #なぜ引数を持ってこられるのか？
 			show_board(board)
 			# 黒が正しく置けたら、ゲーム続行
 			on_gaming = put_and_reverse(board, position, BLACK) #空でないならFalse=置く場所がなければ終了
