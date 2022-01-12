@@ -134,8 +134,13 @@ def game(player1, player2):
 
 # AI 用のインターフェース
   
-def my_AI(board, color): #おチビちゃんAI
-  for position in range(N*N):
-    if put_and_reverse(board, position, color):
+import random
+def Simple_AI(board,color):
+  for _ in range(100):
+    l=[i for i in range(0,N*N)]
+    w=[5,2,3,3,2,5,2,1,4,4,1,2,3,4,0,0,4,3,3,4,0,0,4,3,2,1,4,4,1,2,5,2,3,3,2,5] #重りをつける
+    position=random.choices(l,weights=w)
+    position=position[0]
+    if put_and_reverse(board,position,color):
       return position
   return 0
